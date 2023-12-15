@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://b5ak8uw8jd21"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_brnrp"]
-[ext_resource type="Texture2D" uid="uid://8u3wef8uy7xw" path="res://player/player.png" id="1_enu8w"]
+[ext_resource type="Script" path="res://Object_Node/Player/player.gd" id="1_brnrp"]
+[ext_resource type="Texture2D" uid="uid://8u3wef8uy7xw" path="res://Resource/Sprite2D_Resource/player.png" id="1_enu8w"]
 [ext_resource type="Script" path="res://classes/Hurtbox.gd" id="2_5ifmx"]
 [ext_resource type="Script" path="res://classes/StateMachine.gd" id="3_txykn"]
 

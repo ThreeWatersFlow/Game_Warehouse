@@ -8,6 +8,7 @@ enum State{
 	IDLE_TO_MOVE,
 	MOVE_TO_IDLE,
 	HIT,
+	DYING,
 }
 
 @onready var wall_checker: RayCast2D = $Graphics/WallChecker
@@ -75,5 +76,6 @@ func transition_state(from:State,to:State) -> void:
 
 
 func _on_hurtbox_hurt(hitbox: Hitbox) -> void:
-	#animation_player.play("die")
-	queue_free()
+	stats.now_health -= 1
+	if stats.now_health == 0:
+		queue_free()

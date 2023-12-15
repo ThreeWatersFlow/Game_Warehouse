@@ -22,6 +22,7 @@ var gravity := ProjectSettings.get("physics/2d/default_gravity") as float	#èŽ·å
 @onready var graphics: Node2D = $Graphics
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var stats: Stats = $Stats
 
 
 func move(speed:float,delta:float) -> void:

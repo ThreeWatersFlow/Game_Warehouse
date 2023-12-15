@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dce1xicen6it8"]
 
-[ext_resource type="Script" path="res://Bullet/bullet_1.gd" id="1_4r23x"]
-[ext_resource type="Texture2D" uid="uid://coxc5jnx586q5" path="res://Bullet/bullet1.png" id="1_p5gtv"]
+[ext_resource type="Script" path="res://Object_Node/Bullet/bullet_1.gd" id="1_4r23x"]
+[ext_resource type="Texture2D" uid="uid://coxc5jnx586q5" path="res://Object_Node/Bullet/bullet1.png" id="1_p5gtv"]
 [ext_resource type="Script" path="res://classes/Hitbox.gd" id="3_7bbmo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uj40s"]

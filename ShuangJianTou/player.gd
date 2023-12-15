@@ -17,7 +17,7 @@ enum Direction{
 #位于地面上的状态
 const GROUND_STATES = [State.IDLE,State.RUNNING,State.LANDING,State.ATTACK]
 
-@onready var sprite_2d = $Sprite2D
+@onready var graphics: Node2D = $Graphics
 @onready var animation_player = $AnimationPlayer
 @onready var coyote_timer: Timer = $CoyoteTimer		#郊狼时间
 @onready var jump_request_timer: Timer = $JumpRequestTimer	#提前跳跃按键
@@ -72,8 +72,8 @@ func move(delta:float) -> void:
 	velocity.y += gravity * delta
 
 	if not is_zero_approx(direction):
-		sprite_2d.flip_h = direction > 0
-		if(sprite_2d.flip_h == true):
+		graphics.scale.x = -1 if direction > 0 else 1#左右翻转角色
+		if(graphics.scale.x < 0):
 			faceDirection = Direction.RIGHT
 		else:
 			faceDirection = Direction.LEFT

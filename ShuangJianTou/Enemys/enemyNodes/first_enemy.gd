@@ -72,3 +72,8 @@ func transition_state(from:State,to:State) -> void:
 		State.MOVE_TO_IDLE:
 			animation_player.play("move_to_idle")			
 
+
+
+func _on_hurtbox_hurt(hitbox: Hitbox) -> void:
+	#animation_player.play("die")
+	queue_free()

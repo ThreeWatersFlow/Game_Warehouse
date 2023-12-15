@@ -440,6 +440,7 @@ size = Vector2(23, 38)
 position = Vector2(-1, -24)
 collision_layer = 2
 script = ExtResource("1_brnrp")
+faceDirection = null
 
 [node name="Graphics" type="Node2D" parent="."]
 

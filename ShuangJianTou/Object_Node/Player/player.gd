@@ -34,7 +34,7 @@ var gravity := ProjectSettings.get("physics/2d/default_gravity") as float	#获�
 
 #射击
 signal shoot(bullet,shootLocation,moveDirection)#(子弹对象，发射位置，移动方向)
-var Bullet = preload("res://Bullet/bullet_1.tscn")
+var Bullet = preload("res://Object_Node/Bullet/bullet_1.tscn")
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -80,7 +80,7 @@ func move(delta:float) -> void:
 	move_and_slide()
 
 
-func get_next_state(state:State)->State:
+func get_next_state(state:State)->int:
 	shouldJump = (is_on_floor() or coyote_timer.time_left > 0) and jump_request_timer.time_left > 0
 	if shouldJump:
 		return State.JUMP
@@ -117,7 +117,7 @@ func get_next_state(state:State)->State:
 		State.ATTACK:
 			if not animation_player.is_playing():
 				return State.IDLE
-	return state
+	return StateMachine.KEEP_CURRENT
 
 
 func transition_state(from:State,to:State) -> void:

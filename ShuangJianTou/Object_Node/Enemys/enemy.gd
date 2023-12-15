@@ -29,3 +29,6 @@ func move(speed:float,delta:float) -> void:
 	velocity.x = move_toward(velocity.x,faceDirection * speed,acceleration*delta)
 	velocity.y += gravity * delta
 	move_and_slide()
+
+func die()->void:
+	queue_free()

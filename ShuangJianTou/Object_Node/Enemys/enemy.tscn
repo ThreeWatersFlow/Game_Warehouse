@@ -32,3 +32,4 @@ script = ExtResource("1_qkxc4")
 
 [node name="Stats" type="Node" parent="."]
 script = ExtResource("5_gfjk6")
+max_health = 5

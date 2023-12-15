@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b723evwswxl2y"]
+
+[ext_resource type="PackedScene" uid="uid://b1rdukq34mrh3" path="res://Object_Node/Enemys/enemy.tscn" id="1_x1ykc"]
+[ext_resource type="Texture2D" uid="uid://dn5jnn34lqk6j" path="res://Resource/Sprite2D_Resource/Enemy_Sprite2D_Resource/6197f883b2b7d0a2ceaccda88def76094a369ac0.jpg" id="2_0wwp2"]
+
+[node name="Enemy" instance=ExtResource("1_x1ykc")]
+
+[node name="Sprite2D" parent="Graphics" index="0"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_0wwp2")
